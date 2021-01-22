@@ -23,7 +23,7 @@ const mailOptions = {
     from: 'admonviajess@gmail.com', // dirección del remitente 
     to: 'fernandogarciadolores@gmail.com', // lista de destinatarios 
     subject: 'Restablecer la contraseña', // Línea de asunto 
-    text: 'Usted solicito restablecer su contraseña, del sistema de administracion de Teoria Computacional.\n  Su contraseña es  :  tC0123fd'// cuerpo de texto plano 
+    text: 'Usted solicito restablecer su contraseña, del sistema de administracion de Teoria Computacional.\n  Su usuaio es : Teoria Computacional 21\nSu contraseña es  :  tC0123fd'// cuerpo de texto plano 
   };
 
 
