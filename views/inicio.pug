@@ -1,0 +1,26 @@
+extends ./layout/index
+
+block slider
+    .slider
+        em Blog de Teoria Computacional     
+     
+
+block contenido
+    main.container.mt-5
+            
+        .row.mb-5        
+            img(src="img/inicio_nosotros.jpg", alt= "imagen nosotros" class="img-fluid")
+        include ./layout/vista_viajes
+
+    .descuento   
+        .container
+            .row
+                .col-md-6
+                    .contenido
+                        h3.titulo Ayudanos a portarnos nuevas ligas con contenido relacionado
+                        
+    .container
+        include ./layout/vista_testimoniales
+            
+
+    

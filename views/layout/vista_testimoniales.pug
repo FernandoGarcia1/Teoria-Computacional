@@ -1,0 +1,13 @@
+.row.testimoniales.mt-5
+    each testimonial in testimoniales
+        .col-md-6.col-lg-4.mb-4
+            .card
+                .card-body
+                    blockquote.blockquote
+                    p= testimonial.correo                       
+                    a(href="http://" + testimonial.mensaje,  target="_blank") #{testimonial.mensaje.substr(0,50)}
+                        
+                    footer.blockquote-footer
+                        | #{testimonial.nombre}
+    else 
+        <p>

@@ -1,0 +1,35 @@
+extends ./layout/admin/indexAdmin
+
+block contenido  
+  h1.mt-5.py-5.text-center #{pagina}     
+  // p= JSON.stringify(viajes) -- Muestra toda la info de la bd
+  main.container.mt-5
+      include ./layout/Admin/vista_viajesAdmin
+      .row
+        .col-md-12
+          h2.d-block.w-100.text-center.mt-5 Agrega un nuevo Post
+          if(errores)
+              each error in errores   
+                  .alert.col.alert-danger.text-center= error.mensaje
+
+      .row.justify-content-center.col
+          .col-md-8
+              form(action='/upload' method='POST' enctype='multipart/form-data')
+                  .form-group
+                      label.text-justify(for="titulo") Titulo
+                      input#titulo(Type="text", placeholder="Titulo", name="titulo", class="form-control", value= titulo)
+                  .form-group
+                      label.text-justify(for="precio") Link
+                      input#precio(Type="text", placeholder="www.ejemplo.com/ejemplo", name="precio", class="form-control", value= precio)                                                    
+                  .form-group
+                      input(type='file' name='file') 
+                  .form-group 
+                      label(for="descripcion") Informacion
+                      textarea#mensaje(name="descripcion", cols="30", rows="3" placeholder="Descripcion" class="form-control"
+                      )= descripcion                  
+                  .form-group
+                      label.text-justify(for="slug") Identificador
+                      input#titulo(Type="text", placeholder="post-Arboles1", name="slug", class="form-control", value= slug)
+                  .form-group      
+                      input.btn.btn-success.btn-block(type="submit")
+            
